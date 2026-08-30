@@ -1,10 +1,10 @@
 import { skillGroups } from "@/content/skills";
-import { supporting } from "@/content/supporting";
 import { education } from "@/content/education";
 import { RichText } from "@/components/InlineCode";
 import { TechGrid } from "@/components/TechGrid";
 import { TodoNote } from "@/components/TodoNote";
 import { GithubActivity } from "@/components/GithubActivity";
+import { ProjectGrid } from "@/components/ProjectGrid";
 import { Reveal } from "@/components/Reveal";
 
 /**
@@ -101,31 +101,9 @@ export function AboutContent({ heading = false }: { heading?: boolean }) {
 
       <Reveal as="section" id="supporting" className="mt-12 scroll-mt-24">
         <h2 className="font-mono text-xs uppercase tracking-widest text-muted">
-          Дэмжих ажлууд
+          Бусад төслүүд
         </h2>
-        <ul className="mt-6 max-w-2xl space-y-5">
-          {supporting.map((item) => (
-            <li key={item.title} className="border-t border-line pt-5">
-              <h3 className="font-serif text-lg font-semibold tracking-tight">
-                {item.title}
-              </h3>
-              <p className="mt-1 text-muted">{item.description}</p>
-              <div className="mt-1 flex flex-wrap gap-x-4 font-mono text-xs text-muted">
-                {item.url && (
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-accent hover:underline"
-                  >
-                    {item.url.replace("https://", "")} ↗
-                  </a>
-                )}
-                {item.repo && <span>{item.repo}</span>}
-              </div>
-            </li>
-          ))}
-        </ul>
+        <ProjectGrid />
       </Reveal>
     </>
   );
