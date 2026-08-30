@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/* Хар суурь, цагаан бэх, ягаан → violet gradient accent (reference). */
+:root {
+  color-scheme: dark;
+  --paper: #050506;
+  --ink: #f4f4f7;
+  --muted: #8a8a95;
+  --line: #212128;
+  --accent: #d42fb8; /* magenta */
+  --accent-2: #7c3aed; /* violet */
+  --accent-ink: #ffffff;
+  --gradient: linear-gradient(120deg, var(--accent) 0%, var(--accent-2) 100%);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-accent-ink: var(--accent-ink);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-source-serif);
+  --font-mono: var(--font-jetbrains);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+}
+
+@utility gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility gradient-bg {
+  background: var(--gradient);
+  color: var(--accent-ink);
+}
+
+/* Хулгана дагадаг туяа */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  height: 16rem;
+  width: 16rem;
+  border-radius: 9999px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  will-change: transform;
+  mix-blend-mode: screen;
+  background: radial-gradient(
+    circle,
+    color-mix(in oklab, var(--accent) 18%, transparent) 0%,
+    color-mix(in oklab, var(--accent-2) 10%, transparent) 40%,
+    transparent 70%
+  );
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 41;
+  height: 7px;
+  width: 7px;
+  border-radius: 9999px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: #fff;
+  box-shadow: 0 0 12px 2px color-mix(in oklab, var(--accent) 70%, transparent);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-glow,
+  .cursor-dot {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .cursor-glow,
+  .cursor-dot {
+    display: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
