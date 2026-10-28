@@ -15,6 +15,8 @@ export type CaseStudy = {
   role: string;
   stack: string[];
   liveUrl?: string;
+  // Зураг: public/ доторх зам эсвэл null → градиент placeholder (нэрний эхний үсэг).
+  image?: string | null;
   permissionConfirmed: boolean; // §0.3 — клиентээс бичгээр зөвшөөрөл авсан эсэх
   context: string;
   problem?: string;
@@ -44,6 +46,7 @@ export const cases: CaseStudy[] = [
       "Tailwind CSS",
     ],
     liveUrl: "https://todsocks.mn",
+    image: null,
     permissionConfirmed: true,
     context:
       "ТОД ОЙМС ХХК бол Монголын ноосон оймс, сүлжмэл бүтээгдэхүүнээ 16 улсад экспортолдог үйлдвэр. Тэдний онлайн дэлгүүр cPanel хостинг дээрх хуучин WordPress/WooCommerce стек дээр байсан.",
@@ -77,6 +80,7 @@ export const cases: CaseStudy[] = [
     role: "Design engineering, frontend, brand asset",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "SVG", "Vercel"],
     liveUrl: "https://indert.vercel.app",
+    image: null,
     permissionConfirmed: false,
     context:
       "Индэрт Шүтээн бол PVC цонх, хаалганы үйлдвэр. 17 хуудас хэвлэмэл брошураас өөр дижитал орчин байгаагүй.",

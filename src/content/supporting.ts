@@ -12,6 +12,14 @@ export type SupportingItem = {
 
 export const supporting: SupportingItem[] = [
   {
+    title: "Tod Cashmere",
+    description:
+      "Монгол ноолуурын premium брэндийн онлайн дэлгүүр — Cloudflare edge дээр ажилладаг, Clerk нэвтрэлттэй.",
+    url: "https://todcashmere.com",
+    tech: ["Next.js", "OpenNext", "Cloudflare Workers", "Clerk"],
+    image: null,
+  },
+  {
     title: "Нүүдэлчин",
     description:
       "2D survival тоглоом, Next.js + HTML Canvas. Pinecone Studio-гийн дадлагын багийн төсөл. Survival mechanics систем.",
@@ -33,12 +41,6 @@ export const supporting: SupportingItem[] = [
     description: "Кино хайх, үзэх сайт — жагсаалт, дэлгэрэнгүй хуудас, хайлт.",
     url: "https://movie-web-taupe-mu.vercel.app",
     tech: ["React", "REST API", "Tailwind CSS"],
-    image: null,
-  },
-  {
-    title: "Luxury cashmere e-commerce concept",
-    description: "Editorial дизайн, PDF/Excel export, Resend имэйл.",
-    tech: ["Next.js", "Resend"],
     image: null,
   },
 ];
