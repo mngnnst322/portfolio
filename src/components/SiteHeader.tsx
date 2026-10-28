@@ -8,7 +8,7 @@ const sections: NavSection[] = [
   {
     id: "about",
     label: "Намтар",
-    covers: ["tech", "education", "skills", "github", "supporting"],
+    covers: ["tech", "education", "skills", "github"],
   },
   { id: "gallery", label: "Галерей" },
   { id: "contact", label: "Холбоо барих" },

@@ -4,7 +4,6 @@ import { RichText } from "@/components/InlineCode";
 import { TechGrid } from "@/components/TechGrid";
 import { TodoNote } from "@/components/TodoNote";
 import { GithubActivity } from "@/components/GithubActivity";
-import { ProjectGrid } from "@/components/ProjectGrid";
 import { Reveal } from "@/components/Reveal";
 
 /**
@@ -98,13 +97,6 @@ export function AboutContent({ heading = false }: { heading?: boolean }) {
       </Reveal>
 
       <GithubActivity />
-
-      <Reveal as="section" id="supporting" className="mt-12 scroll-mt-24">
-        <h2 className="font-mono text-xs uppercase tracking-widest text-muted">
-          Бусад төслүүд
-        </h2>
-        <ProjectGrid />
-      </Reveal>
     </>
   );
 }

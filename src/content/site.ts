@@ -21,7 +21,7 @@ export const site = {
 
   // Хөрөг зураг: арын дэвсгэргүй (background-removed) PNG-г `public/portrait.png`
   // дотор хийгээд энэ замыг "/portrait.png" болго. null бол монограм харагдана.
-  portrait: null as string | null,
+  portrait: "/bi.jpeg" as string | null,
 
   // CV / resume файл: `public/` дотор хийгээд замыг бич. null бол товч харагдахгүй.
   resumeUrl: null as string | null,
