@@ -17,7 +17,7 @@ export const site = {
   githubUrl: "https://github.com/mngnnst322",
 
   // Домэйн — deploy хийхээс өмнө солино уу
-  siteUrl: "https://example.com",
+  siteUrl: "https://myangannast-portfolio.vercel.app",
 
   // Хөрөг зураг: арын дэвсгэргүй (background-removed) PNG-г `public/portrait.png`
   // дотор хийгээд энэ замыг "/portrait.png" болго. null бол монограм харагдана.
