@@ -21,7 +21,7 @@ export function AboutContent({ heading = false }: { heading?: boolean }) {
         )}
         <div className="mt-4 max-w-xl space-y-4 leading-8">
           <p>
-            Би Улаанбаатарт төвлөрсөн full-stack хөгжүүлэгч. Монголын
+            Би одоо ТОД ОЙМС ХХК-д software engineer-ээр ажиллаж байна. Монголын
             үйлдвэрлэгчдийн вэбийг хуучин хостингоос Cloudflare-ийн edge дэд бүтэц
             рүү шилжүүлж, QPay зэрэг дотоодын төлбөрийн систем холбож өгдөг.
           </p>
